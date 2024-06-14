@@ -1,0 +1,30 @@
+# packaging
+pip>=9
+setuptools>=26
+twine
+wheel>=0.29
+#h5py>=3.11
+#HDF5>=1.12
+#h5py
+# data science
+numpy
+pandas
+joblib
+scikit-learn
+lightgbm
+# API
+gcsfs
+google-cloud-storage
+s3fs
+fastapi
+uvicorn
+requests
+geopy
+# utilities
+six>=1.14
+memoized-property
+termcolor
+datetime
+streamlit
+# deep learning
+tensorflow
