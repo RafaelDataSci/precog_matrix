@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toronto Crimes Prediction Interface</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center p-2">PreCog Matrix</h1>
+  </div>
+
+  <div class="position-relative">
+    <div class="position-absolute w-100" id="search">
+      <div class="container pt-4 d-flex justify-content-center">
+        <form class="form-inline" id="crime-form">
+          <div class="mr-sm-2" id="address"></div>
+          <input type="hidden" id="address_latitude" name="address_latitude">
+          <input type="hidden" id="address_longitude" name="address_longitude">
+          <input type="text" class="form-control mr-sm-2" id="address_datetime" name="address_datetime">
+          <button type="submit" class="btn btn-primary">Discover Crimes in this area</button>
+        </form>
+      </div>
+    </div>
+    <div id='map' style='width: 100%; height: calc(100vh - 88px - 64px);'></div>
+    <div id="crime" class="position-absolute bg-primary p-4 d-none">
+      <p id="predicted-crimes"></p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src='script.js'></script>
+</body>
+</html>
