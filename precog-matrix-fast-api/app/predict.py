@@ -8,7 +8,7 @@ import pandas as pd
     #terceir opasso: retornar o output (prob)
 
 model_path = 'models/crime_prediction_lightgbm_model.joblib'
-onehot_columns = ['Crime_A', 'Crime_B', 'Crime_C', 'Crime_D', 'Crime_E', 'Crime_F']  # Tem que ajustar, pq não sei os nomes
+#onehot_columns = ['Crime_A', 'Crime_B', 'Crime_C', 'Crime_D', 'Crime_E', 'Crime_F']  # Tem que ajustar, pq não sei os nomes
 
 
 def load_model(model_path):
