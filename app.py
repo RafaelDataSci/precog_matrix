@@ -316,7 +316,7 @@ if page == "Home":
 # Data Visualization Page
 elif page == "Data Visualization":
     render_header("Data Visualization")
-    st.markdown("<h3 style='text-align: center;'>Crimes Data Visualization</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>Crime Data Visualization</h3>", unsafe_allow_html=True)
 
     # Load your dataframe here
     dfmatrix_tratado = pd.read_csv("https://storage.googleapis.com/wagon-bootcamp-422319_cloudbuild/dfmatrix_tratado.csv")  # Replace with your actual data file
