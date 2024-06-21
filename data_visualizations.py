@@ -10,10 +10,10 @@ from branca.colormap import linear
 from streamlit_folium import st_folium
 
 # Load the DataFrame
-dfmatrix_tratado = pd.read_csv('https://storage.googleapis.com/wagon-bootcamp-422319_cloudbuild/dfmatrix_tratado.csv')
+# dfmatrix_tratado = pd.read_csv('https://storage.googleapis.com/wagon-bootcamp-422319_cloudbuild/dfmatrix_tratado.csv')
 
 # Updated crime types list
-crime_types = ["ASSAULT", "AUTO_THEFT", "BREAK_AND_ENTER", "HOMICIDE", "ROBBERY", "THEFT_OVER"]
+# crime_types = ["ASSAULT", "AUTO_THEFT", "BREAK_AND_ENTER", "HOMICIDE", "ROBBERY", "THEFT_OVER"]
 
 # Function for plotting crimes by hour
 def plot_crimes_by_hour(dfmatrix_tratado, crime_types):
