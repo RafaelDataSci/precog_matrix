@@ -12,9 +12,6 @@ from streamlit_folium import st_folium
 # Load the DataFrame
 dfmatrix_tratado = pd.read_csv('https://storage.googleapis.com/wagon-bootcamp-422319_cloudbuild/dfmatrix_tratado.csv')
 
-# # Verify the new column names
-# st.write("Updated Columns in DataFrame:", dfmatrix_tratado.columns.tolist())
-
 # Updated crime types list
 crime_types = ["ASSAULT", "AUTO_THEFT", "BREAK_AND_ENTER", "HOMICIDE", "ROBBERY", "THEFT_OVER"]
 
