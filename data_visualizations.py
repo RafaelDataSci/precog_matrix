@@ -283,7 +283,7 @@ option = st.selectbox(
     ('Crimes by Hour', 'Crimes by Year', 'Crimes by Month', 'Crimes by Day of Week',
      'Crimes by Day of Year', 'Crimes by Day of Month', 'Crimes Correlation',
      'Word Cloud', 'Period of the Day', 'Period of the Month', 'Period of the Week',
-     'Year Categorization', 'Crimes per Season', 'Total Crime Count by Type', 'Create Heatmap')
+     'Year Categorization', 'Crimes per Season', 'Total Crime Count by Type', 'Create Heatmaps')
 )
 
 if option == 'Crimes by Hour':
@@ -315,8 +315,8 @@ elif option == 'Crimes per Season':
     plot_crimes_per_season()
 elif option == 'Total Crime Count by Type':
     plot_total_crime_count_by_type(dfmatrix_tratado, crime_types)
-elif option == 'Create Heatmap':
-    st.header("Create Heatmap")
+elif option == 'Create Heatmaps':
+    # st.header("Create Heatmap")
     north_boundary = 43.8555
     south_boundary = 43.5810
     east_boundary = -79.1150
