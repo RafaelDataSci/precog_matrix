@@ -23,7 +23,7 @@ def coordinates(address):
 # Function to call the prediction API
 def predict_crime(address, crime_date):
     lat, lon = coordinates(address)
-    url = "http://127.0.0.1:8000/predict"
+    url = "https://precogmatrix-nxokte4arq-ew.a.run.app"
     params = {"lat": lat, "lon": lon, "crime_date": crime_date.isoformat()}
     try:
         response = requests.get(url, params=params)
