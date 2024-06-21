@@ -320,5 +320,5 @@ elif option == 'Create Heatmaps':
     south_boundary = 43.5810
     east_boundary = -79.1150
     west_boundary = -79.6393
-    create_heatmaps_for_all_crimes(dfmatrix_tratado, north_boundary, south_boundary, east_boundary, west_boundary)
+create_heatmaps_for_all_crimes(dfmatrix_tratado, north_boundary, south_boundary, east_boundary, west_boundary)
 
