@@ -11,7 +11,7 @@ COPY setup.py setup.py
 
 #COPY requirements.txt /requirements.txt
 COPY requirements.txt requirements.txt
-COPY API /app
+COPY api api
 COPY utils /utils
 COPY models /models
 COPY MANIFEST.in /MANIFEST.in
@@ -19,4 +19,4 @@ COPY MANIFEST.in /MANIFEST.in
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD uvicorn app.fast:app --host 0.0.0.0 --port $PORT
+CMD uvicorn api.fast:app --host 0.0.0.0 --port $PORT

@@ -320,7 +320,7 @@ elif page == "Data Visualization":
     st.markdown("<h3 style='text-align: center;'>Crimes Data Visualization</h3>", unsafe_allow_html=True)
 
     # Load your dataframe here
-    dfmatrix_tratado = pd.read_csv("raw_data/dfmatrix_tratado.csv")  # Replace with your actual data file
+    dfmatrix_tratado = pd.read_csv("https://storage.googleapis.com/wagon-bootcamp-422319_cloudbuild/dfmatrix_tratado.csv")  # Replace with your actual data file
 
     # List of crime types
     crime_types = ["ASSAULT", "AUTO_THEFT", "BREAK_AND_ENTER", "HOMICIDE", "ROBBERY", "THEFT_OVER"]
