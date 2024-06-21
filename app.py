@@ -352,13 +352,6 @@ elif page == "Data Visualization":
         dv.plot_crimes_by_day_of_month(dfmatrix_tratado, crime_types)
     elif visualization == "Crimes Correlation":
         dv.plot_crimes_correlation(dfmatrix_tratado, crime_types)
-    elif visualization == "Heatmap for a Specific Crime":
-        crime_type = st.selectbox("Select a crime type:", crime_types)
-        north_boundary = st.number_input("North Boundary", value=43.9)
-        south_boundary = st.number_input("South Boundary", value=43.6)
-        east_boundary = st.number_input("East Boundary", value=-79.2)
-        west_boundary = st.number_input("West Boundary", value=-79.6)
-        dv.create_heatmap(dfmatrix_tratado, crime_type, north_boundary, south_boundary, east_boundary, west_boundary)
     elif visualization == "Word Cloud for Day of the Week":
         dv.generate_wordcloud(dfmatrix_tratado, "OCC_DOW")
     elif visualization == "Period of the Day":
@@ -373,7 +366,8 @@ elif page == "Data Visualization":
         dv.plot_crimes_per_season()
     elif visualization == "Total Crime Count by Type":
         dv.plot_total_crime_count_by_type(dfmatrix_tratado, crime_types)
-
+    elif option == 'Heatmap for a Specific Crime':
+        dv.create_heatmaps_for_all_crimes(dfmatrix_tratado, 43.8555, 43.5810, -79.1150, -79.6393)
     render_footer()
 
 # Data Analysis Page
