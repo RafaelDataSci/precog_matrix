@@ -316,4 +316,10 @@ elif option == 'Crimes per Season':
 elif option == 'Total Crime Count by Type':
     plot_total_crime_count_by_type(dfmatrix_tratado, crime_types)
 elif option == 'Create Heatmap':
-    create_heatmaps_for_all_crimes(dfmatrix_tratado, 43.8555, 43.5810, -79.1150, -79.6393)
+    st.header("Create Heatmap")
+    north_boundary = 43.8555
+    south_boundary = 43.5810
+    east_boundary = -79.1150
+    west_boundary = -79.6393
+    create_heatmaps_for_all_crimes(dfmatrix_tratado, north_boundary, south_boundary, east_boundary, west_boundary)
+
