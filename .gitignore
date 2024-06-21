@@ -1,1 +1,6 @@
 raw_data/
+.env
+my_dir/
+models/
+*.ipynb
+*__pycache__*
