@@ -275,46 +275,46 @@ def plot_total_crime_count_by_type(dfmatrix_tratado, crime_columns):
     plt.tight_layout()
     st.pyplot(plt)
 
-# Streamlit app interface
-st.title("Crime Data Visualization")
+# # Streamlit app interface
+# st.title("Crime Data Visualization")
 
-option = st.selectbox(
-    'Select a visualization to display:',
-    ('Crimes by Hour', 'Crimes by Year', 'Crimes by Month', 'Crimes by Day of Week',
-     'Crimes by Day of Year', 'Crimes by Day of Month', 'Crimes Correlation',
-     'Word Cloud', 'Period of the Day', 'Period of the Month', 'Period of the Week',
-     'Year Categorization', 'Crimes per Season', 'Total Crime Count by Type', 'Create Heatmaps')
-)
+# option = st.selectbox(
+#     'Select a visualization to display:',
+#     ('Crimes by Hour', 'Crimes by Year', 'Crimes by Month', 'Crimes by Day of Week',
+#      'Crimes by Day of Year', 'Crimes by Day of Month', 'Crimes Correlation',
+#      'Word Cloud', 'Period of the Day', 'Period of the Month', 'Period of the Week',
+#      'Year Categorization', 'Crimes per Season', 'Total Crime Count by Type', 'Create Heatmaps')
+# )
 
-if option == 'Crimes by Hour':
-    plot_crimes_by_hour(dfmatrix_tratado, crime_types)
-elif option == 'Crimes by Year':
-    plot_crimes_by_year(dfmatrix_tratado, crime_types)
-elif option == 'Crimes by Month':
-    plot_crimes_by_month(dfmatrix_tratado, crime_types)
-elif option == 'Crimes by Day of Week':
-    plot_crimes_by_day_of_week(dfmatrix_tratado, crime_types)
-elif option == 'Crimes by Day of Year':
-    plot_crimes_by_day_of_year(dfmatrix_tratado, crime_types)
-elif option == 'Crimes by Day of Month':
-    plot_crimes_by_day_of_month(dfmatrix_tratado, crime_types)
-elif option == 'Crimes Correlation':
-    plot_crimes_correlation(dfmatrix_tratado, crime_types)
-elif option == 'Word Cloud':
-    column_name = st.selectbox('Select column for Word Cloud:', dfmatrix_tratado.columns)
-    generate_wordcloud(dfmatrix_tratado, column_name)
-elif option == 'Period of the Day':
-    plot_period_of_the_day()
-elif option == 'Period of the Month':
-    plot_period_of_the_month()
-elif option == 'Period of the Week':
-    plot_period_of_the_week()
-elif option == 'Year Categorization':
-    plot_year_categorization()
-elif option == 'Crimes per Season':
-    plot_crimes_per_season()
-elif option == 'Total Crime Count by Type':
-    plot_total_crime_count_by_type(dfmatrix_tratado, crime_types)
-elif option == 'Create Heatmaps':
-    create_heatmaps_for_all_crimes(dfmatrix_tratado, 43.8555, 43.5810, -79.1150, -79.6393)
+# if option == 'Crimes by Hour':
+#     plot_crimes_by_hour(dfmatrix_tratado, crime_types)
+# elif option == 'Crimes by Year':
+#     plot_crimes_by_year(dfmatrix_tratado, crime_types)
+# elif option == 'Crimes by Month':
+#     plot_crimes_by_month(dfmatrix_tratado, crime_types)
+# elif option == 'Crimes by Day of Week':
+#     plot_crimes_by_day_of_week(dfmatrix_tratado, crime_types)
+# elif option == 'Crimes by Day of Year':
+#     plot_crimes_by_day_of_year(dfmatrix_tratado, crime_types)
+# elif option == 'Crimes by Day of Month':
+#     plot_crimes_by_day_of_month(dfmatrix_tratado, crime_types)
+# elif option == 'Crimes Correlation':
+#     plot_crimes_correlation(dfmatrix_tratado, crime_types)
+# elif option == 'Word Cloud':
+#     column_name = st.selectbox('Select column for Word Cloud:', dfmatrix_tratado.columns)
+#     generate_wordcloud(dfmatrix_tratado, column_name)
+# elif option == 'Period of the Day':
+#     plot_period_of_the_day()
+# elif option == 'Period of the Month':
+#     plot_period_of_the_month()
+# elif option == 'Period of the Week':
+#     plot_period_of_the_week()
+# elif option == 'Year Categorization':
+#     plot_year_categorization()
+# elif option == 'Crimes per Season':
+#     plot_crimes_per_season()
+# elif option == 'Total Crime Count by Type':
+#     plot_total_crime_count_by_type(dfmatrix_tratado, crime_types)
+# elif option == 'Create Heatmaps':
+#     create_heatmaps_for_all_crimes(dfmatrix_tratado, 43.8555, 43.5810, -79.1150, -79.6393)
 
