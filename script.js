@@ -23,9 +23,20 @@ geocoder.on('result', function(e) {
   document.getElementById('address_longitude').value = lon;
 });
 
+/*
+ flatpickr("#address_datetime", {
+#  enableTime: true,
+#  dateFormat: "Y-m-d H:i",
+# });
+*/
+
 flatpickr("#address_datetime", {
   enableTime: true,
-  dateFormat: "Y-m-d H:i",
+  dateFormat: "Y-m-d H:i",  // Keep the format as it is
+  onChange: function(selectedDates) {
+    const localTime = selectedDates[0].toLocaleString();  // Logs the local time
+    console.log("Selected Local DateTime (EST): ", localTime);
+  }
 });
 
 map.on('click', function(e) {
