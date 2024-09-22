@@ -65,7 +65,7 @@ def predict_query(lat: str, lon: str, crime_date: str):
             return {"error": "Invalid date format. Please use ISO 8601 format (YYYY-MM-DDTHH:MM:SS)"}
 
         # Convert the date to EST timezone
-        est = timezone('America/New_York')
+        # est = timezone('America/New_York')
         #crime_date = crime_date.astimezone(est)  # Convert to EST timezone
 
         # Extract date and time components
