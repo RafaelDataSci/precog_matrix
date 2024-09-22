@@ -32,10 +32,13 @@ geocoder.on('result', function(e) {
 
 flatpickr("#address_datetime", {
   enableTime: true,
-  dateFormat: "Y-m-d H:i",  // Keep the format as it is
+  dateFormat: "Y-m-d H:i",
   onChange: function(selectedDates) {
-    const localTime = selectedDates[0].toLocaleString();  // Logs the local time
-    console.log("Selected Local DateTime (EST): ", localTime);
+    const estTime = selectedDates[0].toLocaleString('en-US', { timeZone: 'America/New_York' });
+    console.log("EST DateTime: ", estTime);
+
+    const utcTime = selectedDates[0].toISOString();  // Convert to UTC
+    console.log("UTC DateTime: ", utcTime);
   }
 });
 
