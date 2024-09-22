@@ -60,13 +60,16 @@ def predict_query(lat: str, lon: str, crime_date: str):
     try:
         # Parse the incoming crime_date string into a datetime object
         try:
-            crime_date = crime_date.replace(tzinfo=timezone.utc).astimezone(est) 
+            crime_date = datetime.fromisoformat(crime_date)  # ISO 8601 format expected
+            logger.debug(f"Parsed crime_date: {crime_date}")
+        except ValueError:
             logger.error(f"Invalid date format: {crime_date}")
             return {"error": "Invalid date format. Please use ISO 8601 format (YYYY-MM-DDTHH:MM:SS)"}
 
         # Convert the date to EST timezone
-        # est = timezone('America/New_York')
-        #crime_date = crime_date.astimezone(est)  # Convert to EST timezone
+        est = timezone('America/New_York')
+        crime_date = crime_date.replace(tzinfo=timezone.utc).astimezone(est)
+        logger.debug(f"Converted crime_date to EST: {crime_date}")
 
         # Extract date and time components
         year, month, day, hour = crime_date.year, crime_date.month, crime_date.day, crime_date.hour
@@ -83,6 +86,9 @@ def predict_query(lat: str, lon: str, crime_date: str):
     except Exception as e:
         logger.error(f"Error occurred: {e}")
         return {"error": str(e)}
+
+
+
 
 # @app.get("/predict")
 # def predict_query(lat: str, lon: str, crime_date: str):
