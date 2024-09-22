@@ -109,16 +109,16 @@ def predict_query(lat: str, lon: str, crime_date: str):
 
         # lat, lon = geocode_address(address + ', Toronto')
 
-        model_path = 'models/crime_prediction_lightgbm_model.joblib'
-        df = load_data(float(lat), float(lon), year, month, day, hour)
-        scaler = load_scaler('models/scaler.joblib')
-        df_processed = preproc(df, scaler)
-        prediction = predict_main(model_path, df_processed, ["AUTO THEFT", "ASSAULT", "ROBBERY", "THEFT OVER", "BREAK AND ENTER", "HOMICIDE"])
+       # model_path = 'models/crime_prediction_lightgbm_model.joblib'
+       # df = load_data(float(lat), float(lon), year, month, day, hour)
+       # scaler = load_scaler('models/scaler.joblib')
+       # df_processed = preproc(df, scaler)
+       # prediction = predict_main(model_path, df_processed, ["AUTO THEFT", "ASSAULT", "ROBBERY", "THEFT OVER", "BREAK AND ENTER", "HOMICIDE"])
 
-        return {"prediction": prediction.tolist()}
-    except ValueError as e:
-        logger.error(f"Error occurred: {e}")
-        return {"error": str(e)}
-    except Exception as e:
-        logger.error(f"Error occurred: {e}")
-        return {"error": str(e)}
+ #       return {"prediction": prediction.tolist()}
+ #   except ValueError as e:
+ #       logger.error(f"Error occurred: {e}")
+ #       return {"error": str(e)}
+ #   except Exception as e:
+ #       logger.error(f"Error occurred: {e}")
+ #       return {"error": str(e)}
