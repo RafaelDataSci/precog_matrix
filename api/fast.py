@@ -60,7 +60,7 @@ def predict_query(lat: str, lon: str, crime_date: str):
     try:
         # Parse the incoming crime_date string into a datetime object
         try:
-            crime_date = crime_date.replace(tzinfo=timezone.utc).astimezone(est) 
+            # crime_date = crime_date.replace(tzinfo=timezone.utc).astimezone(est) 
             logger.error(f"Invalid date format: {crime_date}")
             return {"error": "Invalid date format. Please use ISO 8601 format (YYYY-MM-DDTHH:MM:SS)"}
 
