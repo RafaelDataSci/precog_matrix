@@ -66,7 +66,7 @@ def predict_query(lat: str, lon: str, crime_date: str):
 
         # Convert the date to EST timezone
         est = timezone('America/New_York')
-        crime_date = crime_date.astimezone(est)  # Convert to EST timezone
+        #crime_date = crime_date.astimezone(est)  # Convert to EST timezone
 
         # Extract date and time components
         year, month, day, hour = crime_date.year, crime_date.month, crime_date.day, crime_date.hour
